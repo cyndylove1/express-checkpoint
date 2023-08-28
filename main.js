@@ -21,15 +21,15 @@ app.use(express.static("public"));
 
 // Define routes for each page
 app.get("/", (req, res) => {
-  res.send( "/views/home.html");
+  res.sendFile(__dirname + "/views/home.html");
 });
 
 app.get("/services", (req, res) => {
-  res.send("/views/services.html");
+  res.sendFile(__dirname +"/views/services.html");
 });
 
 app.get("/contact", (req, res) => {
-  res.send("/views/contact.html");
+  res.sendFile(__dirname +"/views/contact.html");
 });
 
 // Start the server
